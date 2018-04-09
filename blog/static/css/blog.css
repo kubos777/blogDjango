@@ -40,3 +40,9 @@ h2{
 .post	h1	a,	.post	h1	a:visited	{
             color:	#000000;
 }
+
+.resp{
+    margin-bottom: -35px;
+    width: 25%;
+    height: auto;
+}
