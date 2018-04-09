@@ -24,7 +24,7 @@ SECRET_KEY = 'k$x&d@l40b_oit8kf_0&yw3^(lix9-4#(!4@g^zp22#9v=44a3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kubos777.pythonanywhere.com']
+ALLOWED_HOSTS = ['kubos777.pythonanywhere.com','127.0.0.1']
 
 # Application definition
 
