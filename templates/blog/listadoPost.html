@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% extends 'blog/base.html' %}
 
-	<title>Posts</title>
-</head>
-<body>
-	<div class="page-header">
-		<h1><a	href="">PROTECO BLOG</a> <img class="resp" src="{% static 'img/djangoPro.png' %}" alt=""></h1>
-	</div>
-    <div class="content container">
-    <div class="row">
-    <div class="col m12">
-{% for post in posts %}
+{% block content %}
+    {% for post in posts %}
 
     <div class="post">
 		<div class="date">Fecha de publicacion: {{ post.fechaPublicacion }}</div>
-		<h1><a	href="">{{ post.titulo }}</a></h1>
+		<h1><a	href="{% url 'detalles' pk=post.pk %}">{{ post.titulo }}</a></h1>
 		<p> {{ post.texto|linebreaksbr }}</p>
 	</div>
     <hr>
 
-{% endfor %}
-    </div>
-    </div>
-</div>
-</body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-</html>
+    {% endfor %}
+{% endblock %}
