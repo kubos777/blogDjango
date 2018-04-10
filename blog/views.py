@@ -38,3 +38,6 @@ def modificar(request,pk):
     else:
         form = PostFormulario(instance=post)
     return render(request, 'blog/editar.html',{'form':form})
+
+def tarea(request):
+    return render(request,'blog/tarea.html',{})
