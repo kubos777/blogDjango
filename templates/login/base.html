@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog PROTECO</title>
-    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -14,19 +14,18 @@
       <a href="#!" class="brand-logo">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="#">Iniciar Sesión</a></li>
+        <li><a href="#">Regístrarse</a></li>
+        <li><a href="#">¿Qué puedo hacer aquí?</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+      <li><a href="#">Iniciar Sesión</a></li>
+      <li><a href="#">Regístrarse</a></li>
+      <li><a href="#">¿Qué puedo hacer aquí?</a></li>
+
   </ul>
 
 
@@ -34,14 +33,13 @@
 
 {% endblock %}
 
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="{% static 'js/materialize.min.js' %}"></script>
-<script>
-     $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-</script>
+
+
+</body>
+<script src="{%  static 'js/jquery-3.3.1.min.js'%}"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
 
 </html>
