@@ -5,36 +5,46 @@
     <meta charset="UTF-8">
     <title>Blog PROTECO</title>
     <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-  <nav>
+  <nav class="#212121 grey darken-4">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" class="brand-logo">Facebook</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Iniciar Sesión</a></li>
-        <li><a href="#">Regístrarse</a></li>
-        <li><a href="#">¿Qué puedo hacer aquí?</a></li>
+        <li><a href="{% url 'iniciarSesion' %}">Iniciar sesión</a></li>
+        <li><a href="{% url 'registrarme' %}">Regístrarse</a></li>
+        <li><a href="{% url 'acercaDe' %}">¿Qué puedo hacer aquí?</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">Iniciar Sesión</a></li>
-      <li><a href="#">Regístrarse</a></li>
-      <li><a href="#">¿Qué puedo hacer aquí?</a></li>
+        <li><a href="{% url 'iniciarSesion' %}">Iniciar sesión</a></li>
+        <li><a href="{% url 'registrarme' %}">Regístrarse</a></li>
+        <li><a href="{% url 'acercaDe' %}">¿Qué puedo hacer aquí?</a></li>
 
   </ul>
 
-
+<main>
 {% block content %}
 
 {% endblock %}
+</main>
 
 
+<footer class="page-footer grey darken-3">
 
+  <div class="footer-copyright">
+    <div class="container">
+    © 2018 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 <script src="{%  static 'js/jquery-3.3.1.min.js'%}"></script>

@@ -9,3 +9,6 @@ def registrarme(request):
 
 def restaurar(request):
     return render(request,'login/restaurar.html',{})
+
+def acercaDe(request):
+    return render(request,'login/acercaDe.html',{})
