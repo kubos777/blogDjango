@@ -1,15 +1,23 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 
+{% block titulo %}
+    Detalles 
+{% endblock titulo %}
 
 {% block content %}
-    <div class="post">
-    {% if post.fechaPublicacion %}
-    <div class="date">
-        {{ post.fechaPublicacion }}
-    </div>
-    {% endif %}
-        <a	class="btn	btn-default" href="{% url 'modificar' pk=post.pk	%}">Editar</a>
-    <h1>{{ post.titulo }}</h1>
-    <p>{{ post.texto|linebreaksbr }}</p>
-<hr>
+
+
+<div class="row">
+		<div class="col s12 m6">
+			<div class="card blue-grey lighten-3">
+				<div class="card-content black-text">
+					<span class="card-title">{{ post.titulo }}</span>
+					<p>{{ post.texto }}</p>
+				</div>
+				<div class="card-action">
+					<a  class="btn-default" href="{% url 'modificar' pk=post.pk	%}" >Editar</a>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
